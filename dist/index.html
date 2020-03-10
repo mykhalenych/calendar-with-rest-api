@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="head">
+            <button class="head-create add-button" id="create"><i class="fas fa-plus header-create__icon"></i>Create</button>
+            <button class="head-today">Today</button>
+            <span class="head-prev"><i class="fas fa-angle-left"></i></span>
+            <span class="head-next"><i class="fas fa-angle-right"></i></span>
+            <div class="head__row">
+                Лютий 2020
+            </div>
+        </div>
+        <div class="week">
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="column">
+        </div>
+        <div class="multicolumns">
+        </div>
+        <div class="redline setTime">
+            <div class="redline__ball"></div>
+            <div class="redline__line"></div>
+        </div>
+
+    </div>
+
+
+
+    <div class="popup hide" id="popup">
+        <form class="popup-form">
+            <input class="popup-form__title" type="text" name="title" id="title" placeholder="Введіть назву події" required>
+
+            <div class="popup-form-main">
+                <!-- <label for="dataStart">Виберіть тривалість події</label> -->
+                <i class="Small material-icons popup-form-main-icon">access_time</i>
+                <input class="main-dataStart" type="datetime-local" name="dataStart" id="dataStart" value="2020-03-03T18:00" required>
+
+                <input class="main-dataEnd" type="datetime-local" name="dataEnd" id="dataEnd" value="2020-03-03T19:00">
+            </div>
+            <div class="subject">
+                <i class="Small material-icons main-icon">subject</i>
+                <input class="popup-form__description" type="text" name="description" id="description" placeholder="Добавити опис">
+            </div>
+            <input type="color" class="popup-form__color" name="color" id="color" value="#2979ff">
+            <div>
+                <label for="color">Виберіть колір для події</label>
+
+            </div>
+            <div class="btn-block">
+                <button class="delete-btn" id="delete"> <i class="material-icons">delete</i></button>
+                <button class="submit btn waves-effect waves-light" type="submit" name="submit" id="submit" disabled>Відправити</button>
+                <!--  class=" btn waves-effect waves-light" >Видалити</button> -->
+            </div>
+            <button class="close btn-floating btn-large waves-effect waves-light red" data-modal="popup">X</button>
+        </form>
+    </div>
+
+
+    <script src="scripts/index.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

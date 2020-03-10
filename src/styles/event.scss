@@ -1,0 +1,38 @@
+.event {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 4px;
+    min-width: 95px;
+    background-color: #2979ff;
+    border-radius: 4px;
+    border-color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    transition: 1s;
+    animation: show 0.5s 1;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    &__name {
+        margin-right: 2px;
+        min-width: 40px;
+        overflow: hidden;
+        z-index: 11;
+    }
+    &__time {
+        display: block;
+        min-width: 100px;
+    }
+    &__description {
+        margin-left: 2px;
+        overflow: hidden;
+        z-index: 10;
+    }
+}
+
+.delete-event {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}

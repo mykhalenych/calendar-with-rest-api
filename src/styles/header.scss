@@ -1,0 +1,103 @@
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    padding-left: 120px;
+    border-bottom: 1px solid #c0c0c0c0;
+    flex-direction: column;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 8888;
+    background-color: #2979ff;
+    background-color: #fafafa;
+    .head {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        padding-bottom: 10px;
+        &-create {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 130px;
+            border-radius: 30px;
+            background-color: white;
+            margin-right: 50px;
+            font-size: 18px;
+            &__icon {
+                margin: 5px;
+            }
+        }
+        &-today {
+            border: 1px solid grey;
+            border-radius: 3px;
+            height: 40px;
+            width: 90px;
+            background-color: transparent;
+            outline: none;
+            margin-right: 50px;
+            font-weight: 700;
+        }
+        &-prev {
+            border: none;
+            font-size: 45px;
+            border-radius: 50%;
+            display: flex;
+            width: 35px;
+            justify-content: center;
+        }
+        &-next {
+            font-size: 45px;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            width: 35px;
+            justify-content: center;
+        }
+        &__row {
+            margin-left: 25px;
+            position: relative;
+            flex-grow: 1;
+            font-size: 25px;
+        }
+    }
+    .week {
+        display: flex;
+        width: 100vw;
+        padding: 0 55px 0 0px;
+        border-top: 1px solid #c0c0c0c0;
+        border-bottom: 1px solid #c0c0c0;
+        flex-wrap: nowrap;
+        margin-bottom: 0 !important;
+    }
+    .date {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        flex-grow: 1;
+        height: 90px;
+        &-week {
+            font-size: 18px;
+            opacity: 0.5;
+        }
+        &-number {
+            width: 40px;
+            height: 40px;
+            align-self: center;
+            margin-top: 5px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+        }
+        .active {
+            color: #fff;
+            background-color: #2979ff;
+        }
+    }
+}
